@@ -29,6 +29,12 @@ class CoursesAdapter(private var listeCourses: MutableList<Course>) : RecyclerVi
 
     override fun getItemCount(): Int = listeCourses.size // retourne la taille de la liste de course
 
+    // Ajouter une course
+    fun ajoutCourse(course: Course) {
+        listeCourses.add(0, course)  // ajout de l'item à la position 0
+        notifyItemInserted(0)    // notifier à l'adapter
+    }
+
     //Viewholder:
     inner class CourseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 

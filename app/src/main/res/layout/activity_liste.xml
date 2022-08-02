@@ -6,13 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".activities.listeActivity">
 
+    // Listener
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bouton_valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ok"
+        android:background="@android:color/holo_red_dark"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    //Listener
+    <EditText
+        android:id="@+id/course"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/bouton_valider"
+        app:layout_constraintRight_toLeftOf="@+id/bouton_valider"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/liste_courses"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bouton_valider"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
